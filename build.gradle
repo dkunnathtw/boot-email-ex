@@ -1,0 +1,40 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    /** JUnit 5 Test Dependencies **/
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+
+    /** Spring Boot Mail **/
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+	/** Greenmail test in-process SMTP server for integration tests **/
+	testImplementation 'com.icegreen:greenmail-junit5:1.6.1'
+
+	/** Camel Dependencies **/
+	implementation 'org.apache.camel.springboot:camel-spring-boot-starter:3.9.0'
+	implementation 'org.apache.camel.springboot:camel-mail-starter:3.9.0'
+	testImplementation 'org.apache.camel:camel-test-spring-junit5:3.9.0'
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,5 @@
+fileignoreconfig:
+- filename: src/main/java/com/example/email/EmailRouteBuilder.java
+  checksum: c55cf30675b09d359ad76b36e70fe361d4d62a7db02234d6a81b4f94c1a65c89
+- filename: README.md
+  checksum: 5491a9204662d537398f966d6b9b67fb4edbb9f5fd51d1610b41408b094b8acb
